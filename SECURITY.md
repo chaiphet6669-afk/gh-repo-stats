@@ -1,5 +1,5 @@
 # Security Policy
-
+https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls
 Note: Open source repositories are [out of scope](https://bounty.github.com/index.html#scope) for the bug bounty program.
 
 ## Supported Versions

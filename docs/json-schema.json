@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/chaiphet6669-afk/gh-repo-stats/main/docs/json-schema.json",
+  "title": "gh-repo-stats output",
+  "description": "JSON Schema for the output produced by `gh-repo-stats --json`",
+  "type": "object",
+  "required": ["repos"],
+  "properties": {
+    "repos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "org",
+          "name",
+          "url",
+          "isFork",
+          "isArchived",
+          "diskUsage",
+          "sizeMB",
+          "hasWikiEnabled",
+          "createdAt",
+          "updatedAt",
+          "pushedAt",
+          "collaborators",
+          "branches",
+          "tags",
+          "branchProtections",
+          "issues",
+          "pullRequests",
+          "milestones",
+          "releases",
+          "projects",
+          "discussions",
+          "commitComments",
+          "issueEvents"
+        ],
+        "properties": {
+          "org": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "isFork": { "type": "boolean" },
+          "isArchived": { "type": "boolean" },
+          "diskUsage": { "type": "integer", "description": "Repository size in KB" },
+          "sizeMB": { "type": "number", "description": "Repository size in MB" },
+          "hasWikiEnabled": { "type": "boolean" },
+          "createdAt": { "type": "string", "format": "date-time" },
+          "updatedAt": { "type": "string", "format": "date-time" },
+          "pushedAt": { "type": "string", "format": "date-time" },
+          "collaborators": { "type": "integer", "minimum": 0 },
+          "branches": { "type": "integer", "minimum": 0 },
+          "tags": { "type": "integer", "minimum": 0 },
+          "branchProtections": { "type": "integer", "minimum": 0 },
+          "issues": { "type": "integer", "minimum": 0 },
+          "pullRequests": { "type": "integer", "minimum": 0 },
+          "milestones": { "type": "integer", "minimum": 0 },
+          "releases": { "type": "integer", "minimum": 0 },
+          "projects": { "type": "integer", "minimum": 0 },
+          "discussions": { "type": "integer", "minimum": 0 },
+          "commitComments": { "type": "integer", "minimum": 0 },
+          "issueEvents": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
